@@ -1,0 +1,667 @@
+{
+	"info": {
+		"_postman_id": "9ebd237c-d52a-4b51-8fdb-fde57f5c6f4e",
+		"name": "Spyne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34688984"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"mobileNo\": \"1234567890\",\n    \"email\": \"john.doe@yopmail.com\",\n    \"password\": \"password123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"john.doe@yopmail.com\",\n    \"password\": \"password123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljNTFjMjU1NWQwMWQ3NDM1MTQ3ZCIsImlhdCI6MTcxODIwODI1OCwiZXhwIjoxNzE4MjExODU4fQ.7ELpP0QZ2gCUK2buxunoTf95K-xP1XbAc0RsTww9Xrs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"john.doe@yopmail.com\",\n    \"password\": \"password123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get users by search name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljNTFjMjU1NWQwMWQ3NDM1MTQ3ZCIsImlhdCI6MTcxODIwODI1OCwiZXhwIjoxNzE4MjExODU4fQ.7ELpP0QZ2gCUK2buxunoTf95K-xP1XbAc0RsTww9Xrs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"john.doe@yopmail.com\",\n    \"password\": \"password123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/users/John Doe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"users",
+						"John Doe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljNTFjMjU1NWQwMWQ3NDM1MTQ3ZCIsImlhdCI6MTcxODIwODI1OCwiZXhwIjoxNzE4MjExODU4fQ.7ELpP0QZ2gCUK2buxunoTf95K-xP1XbAc0RsTww9Xrs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"john.doe@yopmail.com\",\n    \"password\": \"password123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/users/6669c91c884b86315ba074d0/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"users",
+						"6669c91c884b86315ba074d0",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get users by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljNTFjMjU1NWQwMWQ3NDM1MTQ3ZCIsImlhdCI6MTcxODIwODI1OCwiZXhwIjoxNzE4MjExODU4fQ.7ELpP0QZ2gCUK2buxunoTf95K-xP1XbAc0RsTww9Xrs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"john.doe@yopmail.com\",\n    \"password\": \"password123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/users/6669c51c2555d01d7435147d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"users",
+						"6669c51c2555d01d7435147d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create discussions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljNTFjMjU1NWQwMWQ3NDM1MTQ3ZCIsImlhdCI6MTcxODIwODI1OCwiZXhwIjoxNzE4MjExODU4fQ.7ELpP0QZ2gCUK2buxunoTf95K-xP1XbAc0RsTww9Xrs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "WT20 IN USA",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/anujpandey/Pictures/roi.jpg"
+						},
+						{
+							"key": "hashtags",
+							"value": "[\"#cricket\",\"usa\"]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/discussions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"discussions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete discussion",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljNTFjMjU1NWQwMWQ3NDM1MTQ3ZCIsImlhdCI6MTcxODIwODI1OCwiZXhwIjoxNzE4MjExODU4fQ.7ELpP0QZ2gCUK2buxunoTf95K-xP1XbAc0RsTww9Xrs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "WT20 IN USA",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/anujpandey/Pictures/roi.jpg"
+						},
+						{
+							"key": "hashtags",
+							"value": "[\"#cricket\",\"usa\"]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/discussions/666a83daf952822b1cca7e36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"discussions",
+						"666a83daf952822b1cca7e36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get discussion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljOTFjODg0Yjg2MzE1YmEwNzRkMCIsImlhdCI6MTcxODI2MDg4NCwiZXhwIjoxNzE4MjY0NDg0fQ.x5XUIazxPKybwncG7EP6EUhUDgQKapn7cU3GGTYwAxc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "WT20 IN USA",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/anujpandey/Pictures/roi.jpg"
+						},
+						{
+							"key": "hashtags",
+							"value": "[\"#cricket\",\"usa\"]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/discussions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"discussions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Discussion",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljOTFjODg0Yjg2MzE1YmEwNzRkMCIsImlhdCI6MTcxODI1NDAwOCwiZXhwIjoxNzE4MjU3NjA4fQ.sCgyyPZu5x2SMJxPf_FEIquHmN3VHbYrGPhfSyf8TwA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "WT20 USA AND WI AUS",
+							"type": "text"
+						},
+						{
+							"key": "hashtags",
+							"value": "austrelia",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/anujpandey/Pictures/Screenshots/3.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/discussions/6669ceb934c2f61487edf763",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"discussions",
+						"6669ceb934c2f61487edf763"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET DISCUSSION BY TAG",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljNTFjMjU1NWQwMWQ3NDM1MTQ3ZCIsImlhdCI6MTcxODIwODI1OCwiZXhwIjoxNzE4MjExODU4fQ.7ELpP0QZ2gCUK2buxunoTf95K-xP1XbAc0RsTww9Xrs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "WT20 USA AND WI",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/discussions/tag/cricket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"discussions",
+						"tag",
+						"cricket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET DISCUSSION BY text",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljNTFjMjU1NWQwMWQ3NDM1MTQ3ZCIsImlhdCI6MTcxODIwODI1OCwiZXhwIjoxNzE4MjExODU4fQ.7ELpP0QZ2gCUK2buxunoTf95K-xP1XbAc0RsTww9Xrs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "WT20 USA AND WI",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/discussions/text/wt20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"discussions",
+						"text",
+						"wt20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljOTFjODg0Yjg2MzE1YmEwNzRkMCIsImlhdCI6MTcxODI1NDAwOCwiZXhwIjoxNzE4MjU3NjA4fQ.sCgyyPZu5x2SMJxPf_FEIquHmN3VHbYrGPhfSyf8TwA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Comment from india\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/comments/666a83daf952822b1cca7e36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"comments",
+						"666a83daf952822b1cca7e36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update comment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljOTFjODg0Yjg2MzE1YmEwNzRkMCIsImlhdCI6MTcxODI1NDAwOCwiZXhwIjoxNzE4MjU3NjA4fQ.sCgyyPZu5x2SMJxPf_FEIquHmN3VHbYrGPhfSyf8TwA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Comment from india update\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/comments/666a83daf952822b1cca7e36/comments/666a85d8b47c73f8280ffbb2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"comments",
+						"666a83daf952822b1cca7e36",
+						"comments",
+						"666a85d8b47c73f8280ffbb2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete comment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljOTFjODg0Yjg2MzE1YmEwNzRkMCIsImlhdCI6MTcxODI1NDAwOCwiZXhwIjoxNzE4MjU3NjA4fQ.sCgyyPZu5x2SMJxPf_FEIquHmN3VHbYrGPhfSyf8TwA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Comment from india update\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/comments/666a83daf952822b1cca7e36/comments/666a85d8b47c73f8280ffbb2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"comments",
+						"666a83daf952822b1cca7e36",
+						"comments",
+						"666a85d8b47c73f8280ffbb2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljOTFjODg0Yjg2MzE1YmEwNzRkMCIsImlhdCI6MTcxODI1NDAwOCwiZXhwIjoxNzE4MjU3NjA4fQ.sCgyyPZu5x2SMJxPf_FEIquHmN3VHbYrGPhfSyf8TwA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Comment from india update\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/comments/666a83daf952822b1cca7e36/comments/666a85d8b47c73f8280ffbb2/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"comments",
+						"666a83daf952822b1cca7e36",
+						"comments",
+						"666a85d8b47c73f8280ffbb2",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reply on comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjljOTFjODg0Yjg2MzE1YmEwNzRkMCIsImlhdCI6MTcxODI1NDAwOCwiZXhwIjoxNzE4MjU3NjA4fQ.sCgyyPZu5x2SMJxPf_FEIquHmN3VHbYrGPhfSyf8TwA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Comment from india reply on comment\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/comments/666a83daf952822b1cca7e36/comments/666a85d8b47c73f8280ffbb2/reply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"comments",
+						"666a83daf952822b1cca7e36",
+						"comments",
+						"666a85d8b47c73f8280ffbb2",
+						"reply"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
