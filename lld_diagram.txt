@@ -1,0 +1,33 @@
++-------+            +-----------------+         +-----------+          +-----------+
+| Client|  ------->  | Express Server  |  --->   | User      |   ---->  | MongoDB   |
+|       |  POST /login | /login route |         | Controller|          |           |
++-------+            +-----------------+         +-----------+          +-----------+
+                                     |                    |                      |
+                                     |                    |                      |
+                                     |                    |                      |
+                                     V                    V                      V
+                               +------------+   Find User by email  +-------------+
+                               | bcrypt     | <--------------------> | FindOne    |
+                               +------------+                        | Operation  |
+                                   |                                  +-------------+
+                                   |
+                        Compare provided password
+                           with stored hash
+                                   |
+                                   V
+                            +-----------+
+                            | JWT       |
+                            | Generation|
+                            +-----------+
+                                   |
+                                   V
+                           +--------------+
+                           | Prepare      |
+                           | Response     |
+                           +--------------+
+                                   |
+                                   V
+                           +-------------+
+                           | Send Response |
+                           | 200 OK        |
+                           +-------------+

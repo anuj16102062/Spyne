@@ -1,0 +1,20 @@
+Components Involved:
+Client: The user or application making the login request.
+Express Server: The server that handles incoming HTTP requests.
+User Controller: Contains the login function to handle the login logic.
+MongoDB: The database where user data is stored.
+bcrypt: A library for hashing and comparing passwords.
+jsonwebtoken (jwt): A library for generating JSON Web Tokens for authentication.
+Flow:
+Client sends a POST request to the /login endpoint with the email and password in the request body.
+Express Server routes the request to the login function in the User Controller.
+User Controller:
+Extracts the email and password from the request body.
+Queries MongoDB to find a user with the provided email.
+If the user is not found, returns a 400 response with "Invalid credentials".
+If the user is found, uses bcrypt to compare the provided password with the stored hashed password.
+If the passwords do not match, returns a 400 response with "Invalid credentials".
+If the passwords match, generates a JWT token using jsonwebtoken.
+Removes the password field from the user object before sending the response.
+Returns a 200 response with the user object (without the password) and the JWT token.
+Client receives the response containing the user details and the token.
